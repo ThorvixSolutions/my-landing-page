@@ -142,7 +142,29 @@
     .hamburger.open span:nth-child(3) {
       transform: translateY(-7px) rotate(-45deg);
     }
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #080808;
+  z-index: 9999;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: .3s;
+}
+
+.mobile-menu.open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
     /* MOBILE MENU DRAWER */
     .mobile-menu {
       display: none;
@@ -1540,13 +1562,22 @@
         flex: 1
       }
 
-      .nav-links {
-        display: none
-      }
+nav .nav-links {
+  display: none;
+}
 
-      .nav-cta {
-        display: none
-      }
+nav .nav-cta {
+  display: none;
+}
+
+.mobile-menu .nav-links {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.mobile-menu .nav-cta {
+  display: block !important;
+}
 
       .hamburger {
         display: flex
@@ -1862,6 +1893,360 @@
         gap: 16px
       }
     }
+    /* ============ TRUSTED BY ============ */
+    .trusted {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      padding: 36px 0 40px;
+      overflow: hidden;
+      position: relative
+    }
+
+    .trusted-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 28px
+    }
+
+    .trusted-label span {
+      color: var(--accent)
+    }
+
+    .trusted-marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)
+    }
+
+    .trusted-track {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      animation: ticker 36s linear infinite
+    }
+
+    .trusted-marquee:hover .trusted-track {
+      animation-play-state: paused
+    }
+
+    .trusted-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 48px;
+      border-right: 1px solid var(--border);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted2);
+      filter: grayscale(1);
+      transition: color 0.3s
+    }
+
+    .trusted-logo:hover {
+      color: var(--muted)
+    }
+
+    .trusted-logo i {
+      font-style: normal;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted2)
+    }
+
+    .trusted-logo .t-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      color: var(--muted2);
+      border: 1px solid var(--border);
+      padding: 3px 7px
+    }
+
+    /* ============ TEAM ============ */
+    .team {
+      padding: 100px 40px;
+      border-top: 1px solid var(--border)
+    }
+
+    .team-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 64px
+    }
+
+    .team-intro {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 420px;
+      justify-self: end
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border)
+    }
+
+    .team-card {
+      background: var(--bg2);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+      cursor: default
+    }
+
+    .team-card:hover {
+      background: var(--bg3)
+    }
+
+    .team-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease
+    }
+
+    .team-card:hover::after {
+      transform: scaleX(1)
+    }
+
+    .team-photo {
+      aspect-ratio: 1 / 1;
+      background:
+        radial-gradient(110% 80% at 50% 0%, rgba(200, 240, 50, 0.06), transparent 60%),
+        var(--bg3);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+      position: relative
+    }
+
+    .team-photo svg {
+      width: 72%;
+      height: auto;
+      color: #222;
+      transition: color 0.4s, transform 0.4s ease
+    }
+
+    .team-card:hover .team-photo svg {
+      color: #2e3318;
+      transform: scale(1.04)
+    }
+
+    /* Optional member photo: drop an <img class="t-img"> into .team-photo.
+       It covers the silhouette; if src is empty/broken, onerror hides it
+       and the SVG placeholder shows through. */
+    .team-photo .t-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      transition: transform 0.4s ease
+    }
+
+    .team-card:hover .team-photo .t-img {
+      transform: scale(1.04)
+    }
+
+    .team-photo .t-num {
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      z-index: 2;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      color: var(--muted2)
+    }
+
+    .team-info {
+      padding: 24px 24px 30px
+    }
+
+    .team-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase
+    }
+
+    .team-role {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 8px 0 14px;
+      line-height: 1.6
+    }
+
+    .team-focus {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--muted)
+    }
+
+    .team-focus b {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-weight: 400;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted2);
+      margin-bottom: 6px
+    }
+
+    .team-cta {
+      margin-top: 48px;
+      text-align: center
+    }
+
+    .team-cta a {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid transparent;
+      padding-bottom: 3px;
+      transition: border-color 0.25s
+    }
+
+    .team-cta a:hover {
+      border-color: var(--accent)
+    }
+
+    /* ============ SCROLL LIGHTNING BOLT ============ */
+    section,
+    .ticker,
+    .marquee-bar,
+    .trusted,
+    footer {
+      position: relative;
+      z-index: 2
+    }
+
+    #bolt-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      pointer-events: none;
+      overflow: visible
+    }
+
+    #bolt-layer svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible
+    }
+
+    #bolt-glow {
+      stroke: rgba(200, 240, 50, 0.22);
+      stroke-width: 10;
+      fill: none;
+      stroke-linejoin: round;
+      filter: blur(7px)
+    }
+
+    #bolt-core {
+      stroke: #e6ff7d;
+      stroke-width: 1.8;
+      fill: none;
+      stroke-linejoin: round;
+      filter: drop-shadow(0 0 7px rgba(200, 240, 50, 0.9))
+    }
+
+    #bolt-tip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      pointer-events: none;
+      width: 170px;
+      height: 170px;
+      margin: -85px 0 0 -85px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(230, 255, 125, 0.4) 0%, rgba(200, 240, 50, 0.14) 38%, transparent 68%);
+      mix-blend-mode: screen;
+      opacity: 0;
+      transition: opacity 0.45s;
+      animation: tipFlicker 1.7s ease-in-out infinite
+    }
+
+    @keyframes tipFlicker {
+      0%, 100% { filter: brightness(1) }
+      40% { filter: brightness(1.4) }
+      60% { filter: brightness(0.85) }
+    }
+
+    /* surge = bolt is touching it right now */
+    .surge {
+      box-shadow: inset 0 0 0 1px rgba(200, 240, 50, 0.75), 0 0 44px rgba(200, 240, 50, 0.18) !important
+    }
+
+    /* energized = bolt has passed through, residual charge */
+    .energized {
+      box-shadow: inset 0 0 0 1px rgba(200, 240, 50, 0.22)
+    }
+
+    .zap-flash {
+      animation: zapFlash 0.8s ease
+    }
+
+    @keyframes zapFlash {
+      0% { filter: brightness(1) }
+      22% { filter: brightness(1.7) saturate(1.4) }
+      45% { filter: brightness(0.95) }
+      62% { filter: brightness(1.3) }
+      100% { filter: brightness(1) }
+    }
+
+    @media (max-width: 1024px) {
+      .team-grid { grid-template-columns: repeat(3, 1fr) }
+      .team-header { grid-template-columns: 1fr }
+      .team-intro { justify-self: start }
+    }
+
+    @media (max-width: 640px) {
+      .team { padding: 72px 20px }
+      .team-grid { grid-template-columns: 1fr }
+      .trusted-logo { padding: 0 30px; font-size: 17px }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #bolt-layer, #bolt-tip { display: none }
+      .trusted-track, .ticker-track, .marquee-inner { animation: none }
+    }
   </style>
 </head>
 
@@ -1872,6 +2257,7 @@
       <a href="#services" onclick="closeMobileMenu()">Services</a>
       <a href="#solutions" onclick="closeMobileMenu()">Solutions</a>
       <a href="#cases" onclick="closeMobileMenu()">Case Studies</a>
+      <a href="#team" onclick="closeMobileMenu()">Team</a>
       <a href="#about" onclick="closeMobileMenu()">About</a>
     </div>
     <div class="nav-cta" onclick="closeMobileMenu(); openModal()">Book a Consultation</div>
@@ -1923,11 +2309,12 @@
   </div>
 
   <nav>
-<img src="Logo.png" alt="THORVIX" class="image-logo">   
+<img src="https://res.cloudinary.com/dwnllmjtv/image/upload/v1781074836/npeutyqsni4o2klszkea.png" alt="THORVIX" class="image-logo">   
  <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#solutions">Solutions</a>
       <a href="#cases">Case Studies</a>
+      <a href="#team">Team</a>
       <a href="#about">About</a>
     </div>
     <div class="nav-cta" onclick="openModal()">Book a Consultation</div>
@@ -1972,6 +2359,21 @@
   <!-- TICKER -->
   <div class="ticker">
     <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <!-- TRUSTED BY -->
+  <div class="trusted">
+    <div class="trusted-label"><span>✦</span> Trusted by teams shipping at scale</div>
+    <div class="trusted-marquee" aria-hidden="true">
+      <div class="trusted-track" id="trustedTrack">
+        <span class="trusted-logo"><i>◆</i>NovaGrid<span class="t-tag">ENTERPRISE</span></span>
+        <span class="trusted-logo"><i>▲</i>Loopstack<span class="t-tag">SAAS</span></span>
+        <span class="trusted-logo"><i>●</i>Cartello<span class="t-tag">E-COMMERCE</span></span>
+        <span class="trusted-logo"><i>■</i>Keystone<span class="t-tag">REAL ESTATE</span></span>
+        <span class="trusted-logo"><i>◇</i>Meridian Ops<span class="t-tag">ENTERPRISE</span></span>
+        <span class="trusted-logo"><i>✦</i>Veltrix<span class="t-tag">FINTECH</span></span>
+      </div>
+    </div>
   </div>
 
   <!-- SERVICES -->
@@ -2230,6 +2632,68 @@
     </div>
   </section>
 
+  <!-- TEAM -->
+  <section class="team" id="team">
+    <div class="team-header">
+      <div>
+        <div class="sec-label">Our Team</div>
+        <div class="sec-h2">Minds Behind<br>the <span class="outline">Machines.</span></div>
+      </div>
+      <p class="team-intro">A dedicated core of specialists building the future of enterprise intelligence. No layers, no account managers—you work directly with the people who build.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo">
+          <span class="t-num">01 / AI</span>
+          <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><circle cx="100" cy="76" r="38"/><path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z"/></svg>
+          <img class="t-img" src="https://res.cloudinary.com/dwnllmjtv/image/upload/v1781074799/kxqqacil2p5keayxni8o.jpg" alt="Syed Ahmed Iqbal" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Syed Ahmed Iqbal</div>
+          <div class="team-role">AI Engineer · Full-Stack</div>
+          <div class="team-focus"><b>Focus</b>Custom vision language models and scalable Node.js architectures.</div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <span class="t-num">02 / Management</span>
+          <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><circle cx="100" cy="76" r="38"/><path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z"/></svg>
+          <img class="t-img" src="https://res.cloudinary.com/dwnllmjtv/image/upload/v1781081695/s1iiek9euw41pqqv0ieu.jpg" alt="Shoaib Ahmed Sheikh" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Shoaib Ahmed Sheikh</div>
+          <div class="team-role">CEO</div>
+          <div class="team-focus"><b>Focus</b>Business strategy and operations.</div>
+        </div>
+      </div>
+      <!-- <div class="team-card">
+        <div class="team-photo">
+          <span class="t-num">03 / AUTO</span>
+          <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><circle cx="100" cy="76" r="38"/><path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z"/></svg>
+          <img class="t-img" src="ali-afzal.png" alt="Ali Afzal" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Ali Afzal</div>
+          <div class="team-role">Head of Automation</div>
+          <div class="team-focus"><b>Focus</b>API integrations, business process automation, and data pipelines.</div>
+        </div>
+      </div> -->
+      <div class="team-card">
+        <div class="team-photo">
+          <span class="t-num">03 / UX</span>
+          <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><circle cx="100" cy="76" r="38"/><path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z"/></svg>
+          <img class="t-img" src="https://res.cloudinary.com/dwnllmjtv/image/upload/v1781074814/tjsl6ubpkvm4w74id4mg.jpg" alt="Mujtaba Asif" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Mujtaba Asif</div>
+          <div class="team-role">UI &amp; UX Expert</div>
+          <div class="team-focus"><b>Focus</b>Premium SaaS interfaces and human-computer interaction design.</div>
+        </div>
+      </div>
+    </div>
+    <div class="team-cta"><a href="#" onclick="openModal();return false;">Meet Our Extended Engineering Team →</a></div>
+  </section>
+
   <!-- CASE STUDIES -->
   <section class="cases" id="cases">
     <div class="sec-label">Proven Impact</div>
@@ -2288,7 +2752,7 @@
   <footer>
     <div class="footer-top">
       <div>
-<img src="Logo.png" alt="THORVIX" class="image-logo">   
+<img src="https://res.cloudinary.com/dwnllmjtv/image/upload/v1781074836/npeutyqsni4o2klszkea.png" alt="THORVIX" class="image-logo">   
         <div class="footer-tagline">The Stormbreaker to Your Problems. AI-powered engineering, deployed fast.</div>
       </div>
       <div>
@@ -2491,6 +2955,143 @@
       const panel = document.getElementById('panel-' + tab.dataset.panel);
       if (panel) panel.classList.add('active');
     });
+    /* ============ SCROLL-DRIVEN LIGHTNING BOLT ============ */
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      /* bolt path layer (behind content) */
+      const layer = document.createElement('div');
+      layer.id = 'bolt-layer';
+      layer.setAttribute('aria-hidden', 'true');
+      layer.innerHTML = '<svg preserveAspectRatio="none"><path id="bolt-glow"/><path id="bolt-core"/></svg>';
+      document.body.prepend(layer);
+      /* glowing tip (above content, screen-blended) */
+      const tip = document.createElement('div');
+      tip.id = 'bolt-tip';
+      tip.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(tip);
+
+      const svg = layer.querySelector('svg');
+      const coreP = layer.querySelector('#bolt-core');
+      const glowP = layer.querySelector('#bolt-glow');
+
+      let targets = [], samples = [], total = 0, startY = 0, docH = 0;
+      const SEL = '.bento-card,.why-item,.how-step,.ai-mockup,.team-card,.case-card,.testi-quote,.btn-large';
+      const REACH = 175; /* px radius where the bolt "touches" an element */
+
+      function measure() {
+        targets = [...document.querySelectorAll(SEL)].map(el => {
+          const r = el.getBoundingClientRect();
+          return { el, x: r.left + scrollX + r.width / 2, y: r.top + scrollY + r.height / 2 };
+        }).filter(t => t.x > 0).sort((a, b) => a.y - b.y);
+      }
+
+      /* deterministic jitter so the bolt keeps its shape between rebuilds */
+      let seed = 7;
+      const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+
+      function build() {
+        seed = 7;
+        measure();
+        docH = document.documentElement.scrollHeight;
+        const W = document.documentElement.clientWidth;
+        layer.style.height = docH + 'px';
+        svg.setAttribute('viewBox', '0 0 ' + W + ' ' + docH);
+
+        const hero = document.querySelector('.hero');
+        startY = hero ? hero.offsetTop + hero.offsetHeight * 0.85 : 0;
+
+        /* group targets into rows; alternate which card in a row gets struck */
+        const rows = [];
+        targets.forEach(t => {
+          if (t.y < startY) return;
+          const last = rows[rows.length - 1];
+          if (last && Math.abs(last.y - t.y) < 140) last.items.push(t);
+          else rows.push({ y: t.y, items: [t] });
+        });
+
+        const pts = [[W * 0.5, startY]];
+        rows.forEach((row, i) => {
+          const t = row.items[i % row.items.length];
+          const prev = pts[pts.length - 1];
+          const segs = 3;
+          for (let s = 1; s < segs; s++) {
+            const ty = prev[1] + (t.y - prev[1]) * s / segs;
+            let tx = prev[0] + (t.x - prev[0]) * s / segs + (rnd() - 0.5) * 130;
+            tx = Math.max(24, Math.min(W - 24, tx));
+            pts.push([tx, ty]);
+          }
+          pts.push([t.x, t.y]);
+        });
+        pts.push([W * 0.5, docH - 60]);
+
+        const d = 'M' + pts.map(p => Math.round(p[0]) + ' ' + Math.round(p[1])).join(' L ');
+        coreP.setAttribute('d', d);
+        glowP.setAttribute('d', d);
+        total = coreP.getTotalLength();
+        coreP.style.strokeDasharray = total;
+        glowP.style.strokeDasharray = total;
+
+        /* pre-sample length -> y for fast lookup (path y is monotonic) */
+        samples = [];
+        const N = 700;
+        for (let i = 0; i <= N; i++) {
+          const L = total * i / N;
+          samples.push([L, coreP.getPointAtLength(L).y]);
+        }
+        update();
+      }
+
+      function lenForY(y) {
+        let lo = 0, hi = samples.length - 1;
+        while (lo < hi) { const m = (lo + hi) >> 1; (samples[m][1] < y) ? lo = m + 1 : hi = m; }
+        return samples[lo][0];
+      }
+
+      let ticking = false;
+      function update() {
+        ticking = false;
+        if (!total) return;
+        const targetY = scrollY + innerHeight * 0.55;
+        let L;
+        if (targetY <= startY) { L = 0.001; tip.style.opacity = 0; }
+        else { L = Math.min(lenForY(targetY), total); tip.style.opacity = 1; }
+        coreP.style.strokeDashoffset = total - L;
+        glowP.style.strokeDashoffset = total - L;
+
+        const p = coreP.getPointAtLength(L);
+        tip.style.transform = 'translate(' + p.x + 'px,' + p.y + 'px)';
+
+        for (const t of targets) {
+          const near = Math.hypot(t.x - p.x, t.y - p.y) < REACH;
+          if (near) {
+            if (!t.el.classList.contains('energized')) {
+              t.el.classList.add('energized', 'zap-flash');
+              setTimeout(() => t.el.classList.remove('zap-flash'), 850);
+            }
+            t.el.classList.add('surge');
+          } else {
+            t.el.classList.remove('surge');
+          }
+        }
+      }
+
+      addEventListener('scroll', () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+      }, { passive: true });
+
+      let rT;
+      addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(build, 220); });
+
+      /* rebuild when tab panels change height */
+      const tabsEl = document.getElementById('aiTabs');
+      if (tabsEl) tabsEl.addEventListener('click', () => setTimeout(build, 80));
+
+      /* build after layout settles (fonts, images) */
+      if (document.readyState === 'complete') build();
+      else addEventListener('load', build);
+      setTimeout(build, 1600);
+    })();
   </script>
 </body>
 </html>
