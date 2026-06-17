@@ -2264,13 +2264,15 @@
     }
 
     .team-card:not(.is-active) {
-      transform: scale(0.84);
-      opacity: 0.62;
-      filter: saturate(0.9)
+      transform: scale(0.80);
+      opacity: 0.85;
+      z-index: 1;
+      filter: blur(1.1px) saturate(0.85);
+      transition: all 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .team-card.is-active {
-      transform: scale(1.06);
+      transform: scale(1);
       opacity: 1;
       z-index: 2
     }
@@ -3128,6 +3130,23 @@
           </div>
           <div class="team-card">
             <div class="team-photo">
+              <span class="t-num">04 / Development</span>
+              <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+                <circle cx="100" cy="76" r="38" />
+                <path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z" />
+              </svg>
+              <img class="t-img"
+                src="https://res.cloudinary.com/dlktkucvl/image/upload/v1781711773/IMG-20260612-WA0033_rint7j.jpg"
+                alt="Alisha Kanwal" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Alisha Kanwal</div>
+              <div class="team-role">AI Engineer · Full-Stack</div>
+              <div class="team-focus"><b>Focus</b>Scalable agentic architecure and workflows.</div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-photo">
               <span class="t-num">01 / AI</span>
               <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
                 <circle cx="100" cy="76" r="38" />
@@ -3140,7 +3159,8 @@
             <div class="team-info">
               <div class="team-name">Syed Ahmed Iqbal</div>
               <div class="team-role">CTO</div>
-              <div class="team-focus"><b>Focus</b>Technical strategy, AI architecture, and scalable full-stack solutions.
+              <div class="team-focus"><b>Focus</b>Technical strategy, AI architecture, and scalable full-stack
+                solutions.
               </div>
             </div>
           </div>
@@ -3161,7 +3181,145 @@
               <div class="team-focus"><b>Focus</b>Business strategy and operations.</div>
             </div>
           </div>
-          
+          <div class="team-card">
+            <div class="team-photo">
+              <span class="t-num">03 / UX</span>
+              <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+                <circle cx="100" cy="76" r="38" />
+                <path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z" />
+              </svg>
+              <img class="t-img"
+                src="https://res.cloudinary.com/dwnllmjtv/image/upload/v1781074814/tjsl6ubpkvm4w74id4mg.jpg"
+                alt="Mujtaba Asif" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Mujtaba Asif</div>
+              <div class="team-role">UI &amp; UX Expert</div>
+              <div class="team-focus"><b>Focus</b>Premium SaaS interfaces and human-computer interaction design.</div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-photo">
+              <span class="t-num">04 / Development</span>
+              <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+                <circle cx="100" cy="76" r="38" />
+                <path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z" />
+              </svg>
+              <img class="t-img"
+                src="https://res.cloudinary.com/dlktkucvl/image/upload/v1781711773/IMG-20260612-WA0033_rint7j.jpg"
+                alt="Alisha Kanwal" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Alisha Kanwal</div>
+              <div class="team-role">AI Engineer · Full-Stack</div>
+              <div class="team-focus"><b>Focus</b>Scalable agentic architecure and workflows.</div>
+            </div>
+          </div>
+                    <div class="team-card">
+            <div class="team-photo">
+              <span class="t-num">01 / AI</span>
+              <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+                <circle cx="100" cy="76" r="38" />
+                <path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z" />
+              </svg>
+              <img class="t-img"
+                src="https://res.cloudinary.com/dwnllmjtv/image/upload/v1781074799/kxqqacil2p5keayxni8o.jpg"
+                alt="Syed Ahmed Iqbal" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Syed Ahmed Iqbal</div>
+              <div class="team-role">AI Engineer · Full-Stack</div>
+              <div class="team-focus"><b>Focus</b>Custom vision language models and scalable Node.js architectures.
+              </div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-photo">
+              <span class="t-num">02 / Management</span>
+              <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+                <circle cx="100" cy="76" r="38" />
+                <path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z" />
+              </svg>
+              <img class="t-img"
+                src="https://res.cloudinary.com/dwnllmjtv/image/upload/v1781081695/s1iiek9euw41pqqv0ieu.jpg"
+                alt="Shoaib Ahmed Sheikh" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Shoaib Ahmed Sheikh</div>
+              <div class="team-role">CEO</div>
+              <div class="team-focus"><b>Focus</b>Business strategy and operations.</div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-photo">
+              <span class="t-num">03 / UX</span>
+              <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+                <circle cx="100" cy="76" r="38" />
+                <path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z" />
+              </svg>
+              <img class="t-img"
+                src="https://res.cloudinary.com/dwnllmjtv/image/upload/v1781074814/tjsl6ubpkvm4w74id4mg.jpg"
+                alt="Mujtaba Asif" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Mujtaba Asif</div>
+              <div class="team-role">UI &amp; UX Expert</div>
+              <div class="team-focus"><b>Focus</b>Premium SaaS interfaces and human-computer interaction design.</div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-photo">
+              <span class="t-num">04 / Development</span>
+              <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+                <circle cx="100" cy="76" r="38" />
+                <path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z" />
+              </svg>
+              <img class="t-img"
+                src="https://res.cloudinary.com/dlktkucvl/image/upload/v1781711773/IMG-20260612-WA0033_rint7j.jpg"
+                alt="Alisha Kanwal" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Alisha Kanwal</div>
+              <div class="team-role">AI Engineer · Full-Stack</div>
+              <div class="team-focus"><b>Focus</b>Scalable agentic architecure and workflows.</div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-photo">
+              <span class="t-num">01 / AI</span>
+              <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+                <circle cx="100" cy="76" r="38" />
+                <path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z" />
+              </svg>
+              <img class="t-img"
+                src="https://res.cloudinary.com/dwnllmjtv/image/upload/v1781074799/kxqqacil2p5keayxni8o.jpg"
+                alt="Syed Ahmed Iqbal" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Syed Ahmed Iqbal</div>
+              <div class="team-role">CTO</div>
+              <div class="team-focus"><b>Focus</b>Technical strategy, AI architecture, and scalable full-stack
+                solutions.
+              </div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-photo">
+              <span class="t-num">02 / Management</span>
+              <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+                <circle cx="100" cy="76" r="38" />
+                <path d="M100 122c-44 0-72 26-72 62v16h144v-16c0-36-28-62-72-62z" />
+              </svg>
+              <img class="t-img"
+                src="https://res.cloudinary.com/dwnllmjtv/image/upload/v1781081695/s1iiek9euw41pqqv0ieu.jpg"
+                alt="Shoaib Ahmed Sheikh" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Shoaib Ahmed Sheikh</div>
+              <div class="team-role">CEO</div>
+              <div class="team-focus"><b>Focus</b>Business strategy and operations.</div>
+            </div>
+          </div>
           <div class="team-card">
             <div class="team-photo">
               <span class="t-num">03 / UX</span>
@@ -3318,570 +3476,605 @@
       </div>
     </div>
   </footer>
-<script>
-  emailjs.init('T8CAPiTs0sGFJn8nW');
+  <script>
+    emailjs.init('T8CAPiTs0sGFJn8nW');
 
-  function openModal() {
-    document.getElementById('bookingModal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    document.getElementById('bookingModal').classList.remove('active');
-    document.body.style.overflow = 'auto';
-    const status = document.getElementById('formStatus');
-    status.className = 'form-status';
-    status.textContent = '';
-  }
-
-  document.getElementById('bookingModal').addEventListener('click', function (e) {
-    if (e.target === this) closeModal();
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeModal();
-  });
-
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    const btn = document.getElementById('submitBtn');
-    const status = document.getElementById('formStatus');
-
-    const name = document.getElementById('field_name').value.trim();
-    const company = document.getElementById('field_company').value.trim();
-    const email = document.getElementById('field_email').value.trim();
-    const interest = document.getElementById('field_interest').value;
-    const message = document.getElementById('field_message').value.trim();
-
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-    status.className = 'form-status';
-    status.textContent = '';
-
-    const templateParams = {
-      name: name,
-      company: company,
-      email: email,
-      interest: interest,
-      message: message || "(no message provided)",
-      time: new Date().toLocaleString("en-US", { dateStyle: "full", timeStyle: "short" })
-    };
-    emailjs.send('service_31nq1ce', 'template_c10awjm', templateParams)
-      .then(function () {
-        status.className = 'form-status success';
-        status.textContent = '✓ Message sent! We\'ll be in touch within 24 hours.';
-        btn.textContent = 'Book Call';
-        btn.disabled = false;
-        document.getElementById('contactForm').reset();
-        // Auto-close after 2.5s
-        setTimeout(closeModal, 2500);
-      })
-      .catch(function (err) {
-        status.className = 'form-status error';
-        status.textContent = '✗ Failed to send. Please email us directly at thorvix3@gmail.com';
-        btn.textContent = 'Book Call';
-        btn.disabled = false;
-        console.error('EmailJS error:', err);
-      });
-  }
-
-
-  function toggleMobileMenu() {
-    const menu = document.getElementById('mobileMenu');
-    const btn = document.getElementById('hamburgerBtn');
-    const isOpen = menu.classList.contains('open');
-
-    if (isOpen) {
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      document.body.style.overflow = 'auto';
-    } else {
-      menu.classList.add('open');
-      btn.classList.add('open');
+    function openModal() {
+      document.getElementById('bookingModal').classList.add('active');
       document.body.style.overflow = 'hidden';
     }
-  }
 
-  function closeMobileMenu() {
-    document.getElementById('mobileMenu').classList.remove('open');
-    document.getElementById('hamburgerBtn').classList.remove('open');
-    document.body.style.overflow = 'auto';
-  }
+    function closeModal() {
+      document.getElementById('bookingModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+      const status = document.getElementById('formStatus');
+      status.className = 'form-status';
+      status.textContent = '';
+    }
 
-  const tickerItems = ['NovaGrid ENTERPRISE', 'Enterprise AI', 'Dedicated Teams', 'RAG Agents', 'Full-Stack Dev', 'Process Ops', 'Staff Augmentation', 'LLM Engineering', 'AI Chatbots', 'Data Pipelines'];
-  const track = document.getElementById('tickerTrack');
-  const doubled = [...tickerItems, ...tickerItems];
-  doubled.forEach(t => {
-    const div = document.createElement('div');
-    div.className = 'ticker-item';
-    div.innerHTML = `<span>✦</span>${t}`;
-    track.appendChild(div);
-  });
+    document.getElementById('bookingModal').addEventListener('click', function (e) {
+      if (e.target === this) closeModal();
+    });
 
-  /* ============ NEW HERO CANVAS ANIMATION WITH LIGHTNING LABS ============ */
-  const canvas = document.getElementById('heroCanvas');
-  const ctx = canvas.getContext('2d');
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
 
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
+    function handleSubmit(event) {
+      event.preventDefault();
 
-  let nodes = Array.from({ length: 75 }, () => ({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    vx: (Math.random() - 0.5) * 0.75,
-    vy: (Math.random() - 0.5) * 0.75,
-    r: Math.random() * 2.5 + 0.8
-  }));
+      const btn = document.getElementById('submitBtn');
+      const status = document.getElementById('formStatus');
 
-  let bolts = [];
+      const name = document.getElementById('field_name').value.trim();
+      const company = document.getElementById('field_company').value.trim();
+      const email = document.getElementById('field_email').value.trim();
+      const interest = document.getElementById('field_interest').value;
+      const message = document.getElementById('field_message').value.trim();
 
-  class LightningBolt {
-    constructor(x1, y1, x2, y2) {
-      this.points = [];
-      this.life = 650;
-      this.maxLife = 650;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      status.className = 'form-status';
+      status.textContent = '';
 
-      let x = x1, y = y1;
-      this.points.push({ x, y });
+      const templateParams = {
+        name: name,
+        company: company,
+        email: email,
+        interest: interest,
+        message: message || "(no message provided)",
+        time: new Date().toLocaleString("en-US", { dateStyle: "full", timeStyle: "short" })
+      };
+      emailjs.send('service_31nq1ce', 'template_c10awjm', templateParams)
+        .then(function () {
+          status.className = 'form-status success';
+          status.textContent = '✓ Message sent! We\'ll be in touch within 24 hours.';
+          btn.textContent = 'Book Call';
+          btn.disabled = false;
+          document.getElementById('contactForm').reset();
+          // Auto-close after 2.5s
+          setTimeout(closeModal, 2500);
+        })
+        .catch(function (err) {
+          status.className = 'form-status error';
+          status.textContent = '✗ Failed to send. Please email us directly at thorvix3@gmail.com';
+          btn.textContent = 'Book Call';
+          btn.disabled = false;
+          console.error('EmailJS error:', err);
+        });
+    }
 
-      const steps = 8;
-      for (let i = 0; i < steps; i++) {
-        x += (x2 - x1) / steps + (Math.random() - 0.5) * 60;
-        y += (y2 - y1) / steps + (Math.random() - 0.5) * 48;
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('hamburgerBtn');
+      const isOpen = menu.classList.contains('open');
+
+      if (isOpen) {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = 'auto';
+      } else {
+        menu.classList.add('open');
+        btn.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.getElementById('hamburgerBtn').classList.remove('open');
+      document.body.style.overflow = 'auto';
+    }
+
+    const tickerItems = ['NovaGrid ENTERPRISE', 'Enterprise AI', 'Dedicated Teams', 'RAG Agents', 'Full-Stack Dev', 'Process Ops', 'Staff Augmentation', 'LLM Engineering', 'AI Chatbots', 'Data Pipelines'];
+    const track = document.getElementById('tickerTrack');
+    const doubled = [...tickerItems, ...tickerItems];
+    doubled.forEach(t => {
+      const div = document.createElement('div');
+      div.className = 'ticker-item';
+      div.innerHTML = `<span>✦</span>${t}`;
+      track.appendChild(div);
+    });
+
+    /* ============ NEW HERO CANVAS ANIMATION WITH LIGHTNING LABS ============ */
+    const canvas = document.getElementById('heroCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    let nodes = Array.from({ length: 75 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.75,
+      vy: (Math.random() - 0.5) * 0.75,
+      r: Math.random() * 2.5 + 0.8
+    }));
+
+    let bolts = [];
+
+    class LightningBolt {
+      constructor(x1, y1, x2, y2) {
+        this.points = [];
+        this.life = 650;
+        this.maxLife = 650;
+
+        let x = x1, y = y1;
         this.points.push({ x, y });
-      }
-      this.points.push({ x: x2, y: y2 });
-    }
 
-    update() {
-      this.life -= 16;
-    }
-
-    draw() {
-      if (this.life <= 0) return;
-      const alpha = this.life / this.maxLife;
-
-      ctx.save();
-      // Glow
-      ctx.strokeStyle = `rgba(200, 240, 80, ${alpha * 0.9})`;
-      ctx.lineWidth = 3.8;
-      ctx.shadowBlur = 28;
-      ctx.shadowColor = '#c8f032';
-      ctx.beginPath();
-      ctx.moveTo(this.points[0].x, this.points[0].y);
-      for (let i = 1; i < this.points.length; i++) {
-        ctx.lineTo(this.points[i].x, this.points[i].y);
-      }
-      ctx.stroke();
-
-      // Core
-      ctx.strokeStyle = `rgba(255, 255, 220, ${alpha * 0.95})`;
-      ctx.lineWidth = 1.4;
-      ctx.shadowBlur = 14;
-      ctx.beginPath();
-      ctx.moveTo(this.points[0].x, this.points[0].y);
-      for (let i = 1; i < this.points.length; i++) {
-        ctx.lineTo(this.points[i].x, this.points[i].y);
-      }
-      ctx.stroke();
-      ctx.restore();
-    }
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Update nodes
-    nodes.forEach(n => {
-      n.x += n.vx;
-      n.y += n.vy;
-      if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
-      if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
-    });
-
-    // Network lines
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const dist = Math.hypot(dx, dy);
-        if (dist < 160) {
-          const alpha = (1 - dist / 160) * 0.35;
-          ctx.strokeStyle = `rgba(180, 225, 80, ${alpha})`;
-          ctx.lineWidth = 1;
-          ctx.beginPath();
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.stroke();
+        const steps = 8;
+        for (let i = 0; i < steps; i++) {
+          x += (x2 - x1) / steps + (Math.random() - 0.5) * 60;
+          y += (y2 - y1) / steps + (Math.random() - 0.5) * 48;
+          this.points.push({ x, y });
         }
+        this.points.push({ x: x2, y: y2 });
       }
-    }
 
-    // Dots
-    nodes.forEach(n => {
-      ctx.fillStyle = 'rgba(230, 250, 120, 0.9)';
-      ctx.beginPath();
-      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-      ctx.fill();
-    });
+      update() {
+        this.life -= 16;
+      }
 
-    // Update & draw lightning
-    for (let i = bolts.length - 1; i >= 0; i--) {
-      bolts[i].update();
-      bolts[i].draw();
-      if (bolts[i].life <= 0) bolts.splice(i, 1);
-    }
+      draw() {
+        if (this.life <= 0) return;
+        const alpha = this.life / this.maxLife;
 
-    // 🔥 MORE LIGHTNING - Increased frequency
-    if (Math.random() < 0.14) {               // was 0.065 → now much more active
-      const i = Math.floor(Math.random() * nodes.length);
-      const j = Math.floor(Math.random() * nodes.length);
-      if (i !== j) {
-        const dist = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
-        if (dist < 195 && dist > 25) {
-          bolts.push(new LightningBolt(nodes[i].x, nodes[i].y, nodes[j].x, nodes[j].y));
+        ctx.save();
+        // Glow
+        ctx.strokeStyle = `rgba(200, 240, 80, ${alpha * 0.9})`;
+        ctx.lineWidth = 3.8;
+        ctx.shadowBlur = 28;
+        ctx.shadowColor = '#c8f032';
+        ctx.beginPath();
+        ctx.moveTo(this.points[0].x, this.points[0].y);
+        for (let i = 1; i < this.points.length; i++) {
+          ctx.lineTo(this.points[i].x, this.points[i].y);
         }
-      }
-    }
+        ctx.stroke();
 
-    // Extra chance for multiple strikes
-    if (Math.random() < 0.04) {
-      const i = Math.floor(Math.random() * nodes.length);
-      const j = Math.floor(Math.random() * nodes.length);
-      if (i !== j) {
-        const dist = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
-        if (dist < 195 && dist > 25) {
-          bolts.push(new LightningBolt(nodes[i].x, nodes[i].y, nodes[j].x, nodes[j].y));
+        // Core
+        ctx.strokeStyle = `rgba(255, 255, 220, ${alpha * 0.95})`;
+        ctx.lineWidth = 1.4;
+        ctx.shadowBlur = 14;
+        ctx.beginPath();
+        ctx.moveTo(this.points[0].x, this.points[0].y);
+        for (let i = 1; i < this.points.length; i++) {
+          ctx.lineTo(this.points[i].x, this.points[i].y);
         }
+        ctx.stroke();
+        ctx.restore();
       }
     }
 
-    requestAnimationFrame(draw);
-  }
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  draw();
-
-  /* ============ TAB SELECTION LOGIC ============ */
-  document.getElementById('aiTabs').addEventListener('click', e => {
-    const tab = e.target.closest('.ai-tab');
-    if (!tab) return;
-    document.querySelectorAll('.ai-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.ai-panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    const panel = document.getElementById('panel-' + tab.dataset.panel);
-    if (panel) panel.classList.add('active');
-  });
-
-  /* ============ SCROLL-DRIVEN LIGHTNING BOLT ============ */
-  (function () {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    /* bolt path layer (behind content) */
-    const layer = document.createElement('div');
-    layer.id = 'bolt-layer';
-    layer.setAttribute('aria-hidden', 'true');
-    layer.innerHTML = '<svg preserveAspectRatio="none"><path id="bolt-glow"/><path id="bolt-core"/></svg>';
-    document.body.prepend(layer);
-    /* glowing tip (above content, screen-blended) */
-    const tip = document.createElement('div');
-    tip.id = 'bolt-tip';
-    tip.setAttribute('aria-hidden', 'true');
-    document.body.appendChild(tip);
-
-    const svg = layer.querySelector('svg');
-    const coreP = layer.querySelector('#bolt-core');
-    const glowP = layer.querySelector('#bolt-glow');
-
-    let targets = [], samples = [], total = 0, startY = 0, docH = 0;
-    const SEL = '.bento-card,.why-item,.how-step,.ai-mockup,.team-card,.case-card,.testi-quote,.btn-large';
-    const REACH = 175; /* px radius where the bolt "touches" an element */
-
-    function measure() {
-      targets = [...document.querySelectorAll(SEL)].map(el => {
-        const r = el.getBoundingClientRect();
-        return { el, x: r.left + scrollX + r.width / 2, y: r.top + scrollY + r.height / 2 };
-      }).filter(t => t.x > 0).sort((a, b) => a.y - b.y);
-    }
-
-    /* deterministic jitter so the bolt keeps its shape between rebuilds */
-    let seed = 7;
-    const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
-
-    function build() {
-      seed = 7;
-      measure();
-      docH = document.documentElement.scrollHeight;
-      const W = document.documentElement.clientWidth;
-      layer.style.height = docH + 'px';
-      svg.setAttribute('viewBox', '0 0 ' + W + ' ' + docH);
-
-      const hero = document.querySelector('.hero');
-      startY = hero ? hero.offsetTop + hero.offsetHeight * 0.85 : 0;
-
-      /* group targets into rows; alternate which card in a row gets struck */
-      const rows = [];
-      targets.forEach(t => {
-        if (t.y < startY) return;
-        const last = rows[rows.length - 1];
-        if (last && Math.abs(last.y - t.y) < 140) last.items.push(t);
-        else rows.push({ y: t.y, items: [t] });
+      // Update nodes
+      nodes.forEach(n => {
+        n.x += n.vx;
+        n.y += n.vy;
+        if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
+        if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
       });
 
-      const pts = [[W * 0.5, startY]];
-      rows.forEach((row, i) => {
-        const t = row.items[i % row.items.length];
-        const prev = pts[pts.length - 1];
-        const segs = 3;
-        for (let s = 1; s < segs; s++) {
-          const ty = prev[1] + (t.y - prev[1]) * s / segs;
-          let tx = prev[0] + (t.x - prev[0]) * s / segs + (rnd() - 0.5) * 130;
-          tx = Math.max(24, Math.min(W - 24, tx));
-          pts.push([tx, ty]);
-        }
-        pts.push([t.x, t.y]);
-      });
-      pts.push([W * 0.5, docH - 60]);
-
-      const d = 'M' + pts.map(p => Math.round(p[0]) + ' ' + Math.round(p[1])).join(' L ');
-      coreP.setAttribute('d', d);
-      glowP.setAttribute('d', d);
-      total = coreP.getTotalLength();
-      coreP.style.strokeDasharray = total;
-      glowP.style.strokeDasharray = total;
-
-      /* pre-sample length -> y for fast lookup (path y is monotonic) */
-      samples = [];
-      const N = 700;
-      for (let i = 0; i <= N; i++) {
-        const L = total * i / N;
-        samples.push([L, coreP.getPointAtLength(L).y]);
-      }
-      update();
-    }
-
-    function lenForY(y) {
-      let lo = 0, hi = samples.length - 1;
-      while (lo < hi) { const m = (lo + hi) >> 1; (samples[m][1] < y) ? lo = m + 1 : hi = m; }
-      return samples[lo][0];
-    }
-
-    let ticking = false;
-    function update() {
-      ticking = false;
-      if (!total) return;
-      const targetY = scrollY + innerHeight * 0.55;
-      let L;
-      if (targetY <= startY) { L = 0.001; tip.style.opacity = 0; }
-      else { L = Math.min(lenForY(targetY), total); tip.style.opacity = 1; }
-      coreP.style.strokeDashoffset = total - L;
-      glowP.style.strokeDashoffset = total - L;
-
-      const p = coreP.getPointAtLength(L);
-      tip.style.transform = 'translate(' + p.x + 'px,' + p.y + 'px)';
-
-      for (const t of targets) {
-        const near = Math.hypot(t.x - p.x, t.y - p.y) < REACH;
-        if (near) {
-          if (!t.el.classList.contains('energized')) {
-            t.el.classList.add('energized', 'zap-flash');
-            setTimeout(() => t.el.classList.remove('zap-flash'), 850);
+      // Network lines
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < 160) {
+            const alpha = (1 - dist / 160) * 0.35;
+            ctx.strokeStyle = `rgba(180, 225, 80, ${alpha})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
           }
-          t.el.classList.add('surge');
-        } else {
-          t.el.classList.remove('surge');
         }
       }
-    }
 
-    addEventListener('scroll', () => {
-      if (!ticking) { ticking = true; requestAnimationFrame(update); }
-    }, { passive: true });
-
-    let rT;
-    addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(build, 220); });
-
-    /* rebuild when tab panels change height */
-    const tabsEl = document.getElementById('aiTabs');
-    if (tabsEl) tabsEl.addEventListener('click', () => setTimeout(build, 80));
-
-    /* build after layout settles (fonts, images) */
-    if (document.readyState === 'complete') build();
-    else addEventListener('load', build);
-    setTimeout(build, 1600);
-  })();
-
-  /* ============ TEAM CAROUSEL ============ */
-  (function () {
-    const track = document.getElementById('teamCarousel');
-    if (!track) return;
-
-    const seedCards = [...track.querySelectorAll('.team-card')];
-    const seedCount = seedCards.length;
-    const cloneCount = 3;
-    for (let round = 0; round < 1; round++) {
-      seedCards.slice(0, cloneCount).forEach(card => {
-        track.appendChild(card.cloneNode(true));
-      });
-    }
-
-    const cards = [...track.querySelectorAll('.team-card')];
-    const prev = document.querySelector('.team-nav.prev');
-    const next = document.querySelector('.team-nav.next');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let activeIndex = 4;
-    let timer = null;
-    let stepSize = 0;
-
-    function measure() {
-      const card = cards[0];
-      if (!card) return;
-      const cardRect = card.getBoundingClientRect();
-      const nextRect = cards[1] ? cards[1].getBoundingClientRect() : null;
-      stepSize = nextRect ? (nextRect.left - cardRect.left) : cardRect.width;
-    }
-
-    function positionFor(index) {
-      const singleCard = window.matchMedia('(max-width: 1024px)').matches;
-      return singleCard
-        ? Math.max(0, index) * stepSize
-        : Math.max(0, index - 1) * stepSize;
-    }
-
-    function render(smooth = true) {
-      if (!cards.length) return;
-      cards.forEach((card, i) => card.classList.toggle('is-active', i === activeIndex));
-      track.style.transitionDuration = smooth ? '550ms' : '0ms';
-      track.style.transform = 'translateX(' + (-positionFor(activeIndex)) + 'px)';
-    }
-
-    function normalize() {
-      if (activeIndex >= 6) {
-        activeIndex = 3;
-        render(false);
-      }
-      if (activeIndex <= 0) {
-        activeIndex = 3;
-        render(false);
-      }
-    }
-
-    function step(dir) {
-      activeIndex += dir;
-      render(true);
-      window.setTimeout(normalize, 570);
-    }
-
-    function startAuto() {
-      if (reduceMotion) return;
-      stopAuto();
-      timer = setInterval(() => step(1), 2000);
-    }
-
-    function stopAuto() {
-      if (timer) clearInterval(timer);
-      timer = null;
-    }
-
-    prev?.addEventListener('click', () => {
-      step(-1);
-      startAuto();
-    });
-
-    next?.addEventListener('click', () => {
-      step(1);
-      startAuto();
-    });
-
-    requestAnimationFrame(() => {
-      measure();
-      activeIndex = 4;
-      render(false);
-      startAuto();
-    });
-  })();
-</script>
-
-<script>
-  const testimonials = [
-    {
-      quote: "Thorvix didn't just write code—they <strong>understood our business logic</strong> and built around it. The AI integration was seamless, the team was senior, and the results were immediate.",
-      attribution: "Marketing Head, Ren Solutions",
-      location: "Lahore, Pakistan"
-    },
-    {
-      quote: "The team moved fast, communicated clearly, and shipped exactly what we needed. We saw <strong>value from the first week.</strong>",
-      attribution: "Operations Lead, NovaCore",
-      location: "Dubai, UAE"
-    },
-    {
-      quote: "They made a complicated process feel simple. The <strong>product quality and follow-through</strong> were both excellent.",
-      attribution: "Founder, Apex Studio",
-      location: "London, UK"
-    },
-    {
-      quote: "Outstanding execution across the board. Their AI agents <strong>increased our support capacity by 3×</strong> without adding headcount.",
-      attribution: "VP Customer Success, TechFlow",
-      location: "San Francisco, USA"
-    },
-    {
-      quote: "We needed a dedicated team fast, and they delivered <strong>production-ready engineers in 48 hours.</strong> Game changer for us.",
-      attribution: "CTO, InnovateLabs",
-      location: "Toronto, Canada"
-    },
-    {
-      quote: "The process automation they built saved us <strong>20+ hours per week</strong> in manual data entry. ROI was immediate.",
-      attribution: "Head of Operations, DataCore",
-      location: "Berlin, Germany"
-    }
-  ];
-
-  // ============ SLIDER COMPONENT LOGIC ============
-  class TestimonialSlider {
-    constructor(sliderId, trackId, indicatorsId, prevBtnId, nextBtnId, viewportId) {
-      this.slider = document.getElementById(sliderId);
-      this.track = document.getElementById(trackId);
-      this.indicatorsContainer = document.getElementById(indicatorsId);
-      this.prevBtn = document.getElementById(prevBtnId);
-      this.nextBtn = document.getElementById(nextBtnId);
-      this.viewport = document.getElementById(viewportId);
-
-      this.testimonials = testimonials;
-      this.currentIndex = 0;
-      this.autoPlayInterval = null;
-      this.autoPlayDelay = 4000;
-
-      this.init();
-    }
-
-    init() {
-      this.renderSlides();
-      this.renderIndicators();
-
-      this.prevBtn.addEventListener('click', () => this.prev());
-      this.nextBtn.addEventListener('click', () => this.next());
-
-      this.viewport.addEventListener('mouseenter', () => this.pauseAutoPlay());
-      this.viewport.addEventListener('mouseleave', () => this.resumeAutoPlay());
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') this.prev();
-        if (e.key === 'ArrowRight') this.next();
+      // Dots
+      nodes.forEach(n => {
+        ctx.fillStyle = 'rgba(230, 250, 120, 0.9)';
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fill();
       });
 
-      this.startAutoPlay();
-      this.updateSlidePosition();
+      // Update & draw lightning
+      for (let i = bolts.length - 1; i >= 0; i--) {
+        bolts[i].update();
+        bolts[i].draw();
+        if (bolts[i].life <= 0) bolts.splice(i, 1);
+      }
+
+      // 🔥 MORE LIGHTNING - Increased frequency
+      if (Math.random() < 0.14) {               // was 0.065 → now much more active
+        const i = Math.floor(Math.random() * nodes.length);
+        const j = Math.floor(Math.random() * nodes.length);
+        if (i !== j) {
+          const dist = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+          if (dist < 195 && dist > 25) {
+            bolts.push(new LightningBolt(nodes[i].x, nodes[i].y, nodes[j].x, nodes[j].y));
+          }
+        }
+      }
+
+      // Extra chance for multiple strikes
+      if (Math.random() < 0.04) {
+        const i = Math.floor(Math.random() * nodes.length);
+        const j = Math.floor(Math.random() * nodes.length);
+        if (i !== j) {
+          const dist = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+          if (dist < 195 && dist > 25) {
+            bolts.push(new LightningBolt(nodes[i].x, nodes[i].y, nodes[j].x, nodes[j].y));
+          }
+        }
+      }
+
+      requestAnimationFrame(draw);
     }
 
-    renderSlides() {
-      this.testimonials.forEach((testimonial, index) => {
-        const slide = document.createElement('div');
-        slide.className = `testimonial-slide ${index === 0 ? 'active' : ''}`;
-        slide.innerHTML = `
+    draw();
+
+    /* ============ TAB SELECTION LOGIC ============ */
+    document.getElementById('aiTabs').addEventListener('click', e => {
+      const tab = e.target.closest('.ai-tab');
+      if (!tab) return;
+      document.querySelectorAll('.ai-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.ai-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const panel = document.getElementById('panel-' + tab.dataset.panel);
+      if (panel) panel.classList.add('active');
+    });
+
+    /* ============ SCROLL-DRIVEN LIGHTNING BOLT ============ */
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      /* bolt path layer (behind content) */
+      const layer = document.createElement('div');
+      layer.id = 'bolt-layer';
+      layer.setAttribute('aria-hidden', 'true');
+      layer.innerHTML = '<svg preserveAspectRatio="none"><path id="bolt-glow"/><path id="bolt-core"/></svg>';
+      document.body.prepend(layer);
+      /* glowing tip (above content, screen-blended) */
+      const tip = document.createElement('div');
+      tip.id = 'bolt-tip';
+      tip.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(tip);
+
+      const svg = layer.querySelector('svg');
+      const coreP = layer.querySelector('#bolt-core');
+      const glowP = layer.querySelector('#bolt-glow');
+
+      let targets = [], samples = [], total = 0, startY = 0, docH = 0;
+      const SEL = '.bento-card,.why-item,.how-step,.ai-mockup,.team-card,.case-card,.testi-quote,.btn-large';
+      const REACH = 175; /* px radius where the bolt "touches" an element */
+
+      function measure() {
+        targets = [...document.querySelectorAll(SEL)].map(el => {
+          const r = el.getBoundingClientRect();
+          return { el, x: r.left + scrollX + r.width / 2, y: r.top + scrollY + r.height / 2 };
+        }).filter(t => t.x > 0).sort((a, b) => a.y - b.y);
+      }
+
+      /* deterministic jitter so the bolt keeps its shape between rebuilds */
+      let seed = 7;
+      const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+
+      function build() {
+        seed = 7;
+        measure();
+        docH = document.documentElement.scrollHeight;
+        const W = document.documentElement.clientWidth;
+        layer.style.height = docH + 'px';
+        svg.setAttribute('viewBox', '0 0 ' + W + ' ' + docH);
+
+        const hero = document.querySelector('.hero');
+        startY = hero ? hero.offsetTop + hero.offsetHeight * 0.85 : 0;
+
+        /* group targets into rows; alternate which card in a row gets struck */
+        const rows = [];
+        targets.forEach(t => {
+          if (t.y < startY) return;
+          const last = rows[rows.length - 1];
+          if (last && Math.abs(last.y - t.y) < 140) last.items.push(t);
+          else rows.push({ y: t.y, items: [t] });
+        });
+
+        const pts = [[W * 0.5, startY]];
+        rows.forEach((row, i) => {
+          const t = row.items[i % row.items.length];
+          const prev = pts[pts.length - 1];
+          const segs = 3;
+          for (let s = 1; s < segs; s++) {
+            const ty = prev[1] + (t.y - prev[1]) * s / segs;
+            let tx = prev[0] + (t.x - prev[0]) * s / segs + (rnd() - 0.5) * 130;
+            tx = Math.max(24, Math.min(W - 24, tx));
+            pts.push([tx, ty]);
+          }
+          pts.push([t.x, t.y]);
+        });
+        pts.push([W * 0.5, docH - 60]);
+
+        const d = 'M' + pts.map(p => Math.round(p[0]) + ' ' + Math.round(p[1])).join(' L ');
+        coreP.setAttribute('d', d);
+        glowP.setAttribute('d', d);
+        total = coreP.getTotalLength();
+        coreP.style.strokeDasharray = total;
+        glowP.style.strokeDasharray = total;
+
+        /* pre-sample length -> y for fast lookup (path y is monotonic) */
+        samples = [];
+        const N = 700;
+        for (let i = 0; i <= N; i++) {
+          const L = total * i / N;
+          samples.push([L, coreP.getPointAtLength(L).y]);
+        }
+        update();
+      }
+
+      function lenForY(y) {
+        let lo = 0, hi = samples.length - 1;
+        while (lo < hi) { const m = (lo + hi) >> 1; (samples[m][1] < y) ? lo = m + 1 : hi = m; }
+        return samples[lo][0];
+      }
+
+      let ticking = false;
+      function update() {
+        ticking = false;
+        if (!total) return;
+        const targetY = scrollY + innerHeight * 0.55;
+        let L;
+        if (targetY <= startY) { L = 0.001; tip.style.opacity = 0; }
+        else { L = Math.min(lenForY(targetY), total); tip.style.opacity = 1; }
+        coreP.style.strokeDashoffset = total - L;
+        glowP.style.strokeDashoffset = total - L;
+
+        const p = coreP.getPointAtLength(L);
+        tip.style.transform = 'translate(' + p.x + 'px,' + p.y + 'px)';
+
+        for (const t of targets) {
+          const near = Math.hypot(t.x - p.x, t.y - p.y) < REACH;
+          if (near) {
+            if (!t.el.classList.contains('energized')) {
+              t.el.classList.add('energized', 'zap-flash');
+              setTimeout(() => t.el.classList.remove('zap-flash'), 850);
+            }
+            t.el.classList.add('surge');
+          } else {
+            t.el.classList.remove('surge');
+          }
+        }
+      }
+
+      addEventListener('scroll', () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+      }, { passive: true });
+
+      let rT;
+      addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(build, 220); });
+
+      /* rebuild when tab panels change height */
+      const tabsEl = document.getElementById('aiTabs');
+      if (tabsEl) tabsEl.addEventListener('click', () => setTimeout(build, 80));
+
+      /* build after layout settles (fonts, images) */
+      if (document.readyState === 'complete') build();
+      else addEventListener('load', build);
+      setTimeout(build, 1600);
+    })();
+
+    /* ============ TEAM CAROUSEL - PERFECT SMOOTH AUTO INFINITE LOOP ============ */
+    (function () {
+      const track = document.getElementById('teamCarousel');
+      if (!track) return;
+
+      const originalCards = [...track.querySelectorAll('.team-card')];
+      if (originalCards.length === 0) return;
+
+      // Duplicate cards for seamless infinite scrolling
+      const clonesBefore = originalCards.slice(-3).map(c => c.cloneNode(true));
+      const clonesAfter = originalCards.slice(0, 3).map(c => c.cloneNode(true));
+
+      clonesBefore.forEach(clone => track.insertBefore(clone, track.firstChild));
+      clonesAfter.forEach(clone => track.appendChild(clone));
+
+      const allCards = [...track.querySelectorAll('.team-card')];
+      const prevBtn = document.querySelector('.team-nav.prev');
+      const nextBtn = document.querySelector('.team-nav.next');
+
+      let currentIndex = 3;           // Start at first real card
+      let stepSize = 0;
+      let isTransitioning = false;
+      let autoTimer = null;
+
+      function measure() {
+        const firstCard = allCards[0];
+        if (!firstCard) return;
+        const rect1 = firstCard.getBoundingClientRect();
+        const rect2 = allCards[1]?.getBoundingClientRect();
+        stepSize = rect2 ? rect2.left - rect1.left : rect1.width + 24;
+      }
+
+      function getPosition(index) {
+        const isMobile = window.matchMedia('(max-width: 1024px)').matches;
+        return isMobile ? index * stepSize : (index - 1) * stepSize;
+      }
+
+      function updatePosition(smooth = true) {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        // Highlight active card
+        allCards.forEach((card, i) => {
+          card.classList.toggle('is-active', i === currentIndex);
+        });
+
+        track.style.transition = smooth
+          ? 'transform 650ms cubic-bezier(0.32, 0.72, 0, 1)'
+          : 'none';
+
+        track.style.transform = `translateX(-${getPosition(currentIndex)}px)`;
+
+        setTimeout(() => isTransitioning = false, 700);
+      }
+
+      function normalize() {
+        const originalCount = originalCards.length;
+
+        if (currentIndex >= originalCount + 3) {
+          currentIndex -= originalCount;
+          track.style.transition = 'none';
+          track.style.transform = `translateX(-${getPosition(currentIndex)}px)`;
+          void track.offsetWidth; // force reflow
+        }
+        else if (currentIndex < 3) {
+          currentIndex += originalCount;
+          track.style.transition = 'none';
+          track.style.transform = `translateX(-${getPosition(currentIndex)}px)`;
+          void track.offsetWidth;
+        }
+      }
+
+      function next() {
+        if (isTransitioning) return;
+        currentIndex++;
+        updatePosition(true);
+        setTimeout(() => {
+          normalize();
+        }, 680);
+      }
+
+      function prev() {
+        if (isTransitioning) return;
+        currentIndex--;
+        updatePosition(true);
+        setTimeout(normalize, 680);
+      }
+
+      function startAutoScroll() {
+        stopAutoScroll();
+        autoTimer = setInterval(next, 3200); // Auto scroll every 3.2 seconds
+      }
+
+      function stopAutoScroll() {
+        if (autoTimer) clearInterval(autoTimer);
+        autoTimer = null;
+      }
+
+      // Button Controls
+      prevBtn?.addEventListener('click', () => {
+        prev();
+        startAutoScroll();
+      });
+
+      nextBtn?.addEventListener('click', () => {
+        next();
+        startAutoScroll();
+      });
+
+      // Initialize
+      function initialize() {
+        measure();
+        currentIndex = 3; // Start cleanly
+        updatePosition(false);
+        startAutoScroll();
+      }
+
+      requestAnimationFrame(initialize);
+
+      // Resize support
+      window.addEventListener('resize', () => {
+        measure();
+        updatePosition(false);
+      });
+    })();
+  </script>
+  <script>
+    const testimonials = [
+      {
+        quote: "Thorvix didn't just write code—they <strong>understood our business logic</strong> and built around it. The AI integration was seamless, the team was senior, and the results were immediate.",
+        attribution: "Marketing Head, Ren Solutions",
+        location: "Lahore, Pakistan"
+      },
+      {
+        quote: "The team moved fast, communicated clearly, and shipped exactly what we needed. We saw <strong>value from the first week.</strong>",
+        attribution: "Operations Lead, NovaCore",
+        location: "Dubai, UAE"
+      },
+      {
+        quote: "They made a complicated process feel simple. The <strong>product quality and follow-through</strong> were both excellent.",
+        attribution: "Founder, Apex Studio",
+        location: "London, UK"
+      },
+      {
+        quote: "Outstanding execution across the board. Their AI agents <strong>increased our support capacity by 3×</strong> without adding headcount.",
+        attribution: "VP Customer Success, TechFlow",
+        location: "San Francisco, USA"
+      },
+      {
+        quote: "We needed a dedicated team fast, and they delivered <strong>production-ready engineers in 48 hours.</strong> Game changer for us.",
+        attribution: "CTO, InnovateLabs",
+        location: "Toronto, Canada"
+      },
+      {
+        quote: "The process automation they built saved us <strong>20+ hours per week</strong> in manual data entry. ROI was immediate.",
+        attribution: "Head of Operations, DataCore",
+        location: "Berlin, Germany"
+      }
+    ];
+
+    // ============ SLIDER COMPONENT LOGIC ============
+    class TestimonialSlider {
+      constructor(sliderId, trackId, indicatorsId, prevBtnId, nextBtnId, viewportId) {
+        this.slider = document.getElementById(sliderId);
+        this.track = document.getElementById(trackId);
+        this.indicatorsContainer = document.getElementById(indicatorsId);
+        this.prevBtn = document.getElementById(prevBtnId);
+        this.nextBtn = document.getElementById(nextBtnId);
+        this.viewport = document.getElementById(viewportId);
+
+        this.testimonials = testimonials;
+        this.currentIndex = 0;
+        this.autoPlayInterval = null;
+        this.autoPlayDelay = 4000;
+
+        this.init();
+      }
+
+      init() {
+        this.renderSlides();
+        this.renderIndicators();
+
+        this.prevBtn.addEventListener('click', () => this.prev());
+        this.nextBtn.addEventListener('click', () => this.next());
+
+        this.viewport.addEventListener('mouseenter', () => this.pauseAutoPlay());
+        this.viewport.addEventListener('mouseleave', () => this.resumeAutoPlay());
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') this.prev();
+          if (e.key === 'ArrowRight') this.next();
+        });
+
+        this.startAutoPlay();
+        this.updateSlidePosition();
+      }
+
+      renderSlides() {
+        this.testimonials.forEach((testimonial, index) => {
+          const slide = document.createElement('div');
+          slide.className = `testimonial-slide ${index === 0 ? 'active' : ''}`;
+          slide.innerHTML = `
           <div class="testimonial-quote">${testimonial.quote}</div>
           <div class="testimonial-attribution">
             — ${testimonial.attribution}
@@ -3889,87 +4082,87 @@
             ${testimonial.location}
           </div>
         `;
-        this.track.appendChild(slide);
-      });
-    }
-
-    renderIndicators() {
-      this.testimonials.forEach((_, index) => {
-        const dot = document.createElement('button');
-        dot.className = `indicator-dot ${index === 0 ? 'active' : ''}`;
-        dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
-        dot.addEventListener('click', () => this.goToSlide(index));
-        this.indicatorsContainer.appendChild(dot);
-      });
-    }
-
-    updateSlidePosition() {
-      const offset = -this.currentIndex * 100;
-      this.track.style.transform = `translateX(${offset}%)`;
-
-      const slides = this.track.querySelectorAll('.testimonial-slide');
-      slides.forEach((slide, index) => {
-        slide.classList.toggle('active', index === this.currentIndex);
-      });
-
-      const dots = this.indicatorsContainer.querySelectorAll('.indicator-dot');
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === this.currentIndex);
-      });
-    }
-
-    next() {
-      this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
-      this.updateSlidePosition();
-      this.resetAutoPlay();
-    }
-
-    prev() {
-      this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
-      this.updateSlidePosition();
-      this.resetAutoPlay();
-    }
-
-    goToSlide(index) {
-      this.currentIndex = index;
-      this.updateSlidePosition();
-      this.resetAutoPlay();
-    }
-
-    startAutoPlay() {
-      this.autoPlayInterval = setInterval(() => this.next(), this.autoPlayDelay);
-    }
-
-    pauseAutoPlay() {
-      if (this.autoPlayInterval) {
-        clearInterval(this.autoPlayInterval);
-        this.autoPlayInterval = null;
+          this.track.appendChild(slide);
+        });
       }
-      this.viewport.classList.add('paused');
+
+      renderIndicators() {
+        this.testimonials.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.className = `indicator-dot ${index === 0 ? 'active' : ''}`;
+          dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+          dot.addEventListener('click', () => this.goToSlide(index));
+          this.indicatorsContainer.appendChild(dot);
+        });
+      }
+
+      updateSlidePosition() {
+        const offset = -this.currentIndex * 100;
+        this.track.style.transform = `translateX(${offset}%)`;
+
+        const slides = this.track.querySelectorAll('.testimonial-slide');
+        slides.forEach((slide, index) => {
+          slide.classList.toggle('active', index === this.currentIndex);
+        });
+
+        const dots = this.indicatorsContainer.querySelectorAll('.indicator-dot');
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === this.currentIndex);
+        });
+      }
+
+      next() {
+        this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
+        this.updateSlidePosition();
+        this.resetAutoPlay();
+      }
+
+      prev() {
+        this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+        this.updateSlidePosition();
+        this.resetAutoPlay();
+      }
+
+      goToSlide(index) {
+        this.currentIndex = index;
+        this.updateSlidePosition();
+        this.resetAutoPlay();
+      }
+
+      startAutoPlay() {
+        this.autoPlayInterval = setInterval(() => this.next(), this.autoPlayDelay);
+      }
+
+      pauseAutoPlay() {
+        if (this.autoPlayInterval) {
+          clearInterval(this.autoPlayInterval);
+          this.autoPlayInterval = null;
+        }
+        this.viewport.classList.add('paused');
+      }
+
+      resumeAutoPlay() {
+        this.viewport.classList.remove('paused');
+        this.startAutoPlay();
+      }
+
+      resetAutoPlay() {
+        this.pauseAutoPlay();
+        setTimeout(() => this.resumeAutoPlay(), 300);
+      }
     }
 
-    resumeAutoPlay() {
-      this.viewport.classList.remove('paused');
-      this.startAutoPlay();
-    }
-
-    resetAutoPlay() {
-      this.pauseAutoPlay();
-      setTimeout(() => this.resumeAutoPlay(), 300);
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    new TestimonialSlider(
-      'testimonialSlider',
-      'sliderTrack',
-      'indicators',
-      'prevBtn',
-      'nextBtn',
-      'sliderViewport'
-    );
-  });
-</script>
+    document.addEventListener('DOMContentLoaded', () => {
+      new TestimonialSlider(
+        'testimonialSlider',
+        'sliderTrack',
+        'indicators',
+        'prevBtn',
+        'nextBtn',
+        'sliderViewport'
+      );
+    });
+  </script>
 </body>
 
 </html>
